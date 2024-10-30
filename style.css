@@ -1,0 +1,103 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Container */
+.container {
+  width: 90%;  /* Responsive width */
+  max-width: 400px;
+  padding: 20px;
+  background-image: linear-gradient(#088fcd, #1eb2bd, #1ebd98, #1ebd63);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Company Logo */
+.logo {
+  text-align: center;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.logo img {
+  width: 150px;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Form Styles */
+.contact-form h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;  /* Full width */
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #1ebd63;
+  box-shadow: 0 0 8px rgba(30, 189, 98, 0.5);
+}
+
+/* Button Styles */
+button {
+  width: 70%;  /* Chhota button size */
+  padding: 10px;
+  background-color: #00b4d8;
+  color: black;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  display: block;  /* Ensure button is treated as a block element */
+  margin: 20px auto 0;  /* Centering with automatic left and right margins */
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #4cae4c;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .container {
+    padding: 15px;  /* Adjust padding on smaller screens */
+  }
+  
+  button {
+    font-size: 18px;  /* Increase font size on smaller screens */
+  }
+}
+

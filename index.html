@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Contact Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Company Logo -->
+    <div class="logo">
+      <img src="https://i.postimg.cc/44mMgb4P/IMG-20241019-WA0007.jpg" alt="phone image">
+    </div>
+
+    <!-- Contact Form -->
+    <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+      <h1>Contact Us</h1>
+
+      <div class="form-group">
+        <input type="hidden" name="access_key" value="090c6445-d429-45df-bf96-92d4514731c8">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+      </div>
+
+      <div class="form-group">
+        <label>What do you need?</label>
+        <select name="service" required>
+          <option value="" disabled selected>Select</option>
+          <option value="website">Website</option>
+          <option value="thumbnail">Thumbnail</option>
+          <option value="logo">Logo</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" placeholder="Write your message here..."></textarea>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
