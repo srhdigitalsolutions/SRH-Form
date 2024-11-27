@@ -3,60 +3,68 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Customer Contact Form</title>
+  <title>SRH Form</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
     <!-- Company Logo -->
     <div class="logo">
-      <img src="https://i.postimg.cc/X75mLN7J/IMG-20241116-WA0039.jpg" alt="phone image">
+      <img src="https://i.postimg.cc/X75mLN7J/IMG-20241116-WA0039.jpg" alt="SRH Logo">
     </div>
 
     <!-- Contact Form -->
     <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
       <h1>Contact Us</h1>
 
+      <!-- Hidden Access Key -->
+      <input type="hidden" name="access_key" value="090c6445-d429-45df-bf96-92d4514731c8">
+
+      <!-- Name Input -->
       <div class="form-group">
-        <input type="hidden" name="access_key" value="090c6445-d429-45df-bf96-92d4514731c8">
         <label for="name">Full Name:</label>
         <input type="text" id="name" name="name" placeholder="Enter your full name" required>
       </div>
 
+      <!-- Email Input -->
       <div class="form-group">
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" placeholder="Enter your email" required>
       </div>
 
+      <!-- Phone Input -->
       <div class="form-group">
         <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required pattern="[0-9]{10}" title="Enter a valid 10-digit phone number">
       </div>
 
+      <!-- Services Dropdown -->
       <div class="form-group">
-        <label>What do you need?</label>
-        <select name="service[]" multiple required>
+        <label for="service">What do you need?</label>
+        <select name="service[]" id="service" multiple required>
           <option value="" disabled selected hidden>Select</option>
           <option value="website">Website</option>
           <option value="thumbnail">Thumbnail</option>
           <option value="Custom Logos">Custom Logos</option>
           <option value="Flyer/Poster Design">Flyer/Poster Design</option>
-           <option value="Social Media Covers & Posts">Social Media Covers & Posts</option>
-           <option value="Brochures & Banners">Brochures & Banners</option>
-           <option value="Book Covers">Book Covers</option>
-           <option value="Letterheads">Letterheads</option>
-           <option value="Ads">Ads</option>
-           <option value="Visiting Cards">Visiting Cards</option>
-           <option value="Email Templates">Email Templates</option>
-           <option value="Web Development">Web Development</option>
+          <option value="Social Media Covers & Posts">Social Media Covers & Posts</option>
+          <option value="Brochures & Banners">Brochures & Banners</option>
+          <option value="Book Covers">Book Covers</option>
+          <option value="Letterheads">Letterheads</option>
+          <option value="Ads">Ads</option>
+          <option value="Visiting Cards">Visiting Cards</option>
+          <option value="Email Templates">Email Templates</option>
+          <option value="Web Development">Web Development</option>
         </select>
       </div>
 
+      <!-- Message Input -->
       <div class="form-group">
         <label for="message">Message:</label>
         <textarea id="message" name="message" rows="4" placeholder="Write your message here..."></textarea>
       </div>
 
+      <!-- Submit Button -->
       <button type="submit">Submit</button>
     </form>
   </div>
