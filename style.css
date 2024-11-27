@@ -19,13 +19,25 @@ body {
   background-image: linear-gradient(#088fcd, #1eb2bd, #1ebd98, #1ebd63);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/* Fullscreen styles for large screens */
+@media (min-width: 1024px) {
+  .container {
+    max-width: none;
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 40px;
+  }
 }
 
 /* Company Logo */
 .logo {
   text-align: center;
   margin-bottom: 20px;
-  border-radius: 5px;
 }
 
 .logo img {
@@ -39,6 +51,7 @@ body {
 .contact-form h1 {
   text-align: center;
   margin-bottom: 20px;
+  font-size: 2rem;
 }
 
 .form-group {
@@ -72,7 +85,7 @@ body {
 
 /* Button Styles */
 button {
-  width: 70%;  /* Chhota button size */
+  width: 70%;
   padding: 10px;
   background-color: #00b4d8;
   color: black;
@@ -101,4 +114,3 @@ button:hover {
     font-size: 18px;  /* Increase font size on smaller screens */
   }
 }
-
