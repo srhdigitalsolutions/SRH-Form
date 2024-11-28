@@ -13,7 +13,7 @@ body {
 
 /* Container */
 .container {
-  width: 90%;  /* Responsive width */
+  width: 90%; /* Responsive width */
   max-width: 400px;
   padding: 20px;
   background-image: linear-gradient(#088fcd, #1eb2bd, #1ebd98, #1ebd63);
@@ -31,6 +31,9 @@ body {
     border-radius: 0;
     box-shadow: none;
     padding: 40px;
+    display: flex; /* Ensures content is vertically centered */
+    flex-direction: column;
+    justify-content: center;
   }
 }
 
@@ -52,6 +55,7 @@ body {
   text-align: center;
   margin-bottom: 20px;
   font-size: 2rem;
+  color: black; /* Makes the heading more visible */
 }
 
 .form-group {
@@ -62,17 +66,30 @@ body {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
+  color: black; /* Ensures text is visible on gradient background */
 }
 
 .form-group input,
 .form-group textarea,
 .form-group select {
-  width: 100%;  /* Full width */
+  width: 100%; /* Full width */
   padding: 10px;
   margin-top: 5px;
   border: 1px solid black;
   border-radius: 5px;
   box-sizing: border-box;
+  font-size: 16px; /* Increases readability */
+  background-color: white; /* Enhances focus visibility */
+}
+
+/* Dropdown specific styles */
+.form-group select {
+  appearance: none; /* Removes default browser styling */
+  cursor: pointer;
+}
+
+.form-group select[multiple] {
+  height: auto; /* Ensures multiple dropdowns do not restrict height */
 }
 
 .form-group input:focus,
@@ -93,8 +110,8 @@ button {
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
-  display: block;  /* Ensure button is treated as a block element */
-  margin: 20px auto 0;  /* Centering with automatic left and right margins */
+  display: block;
+  margin: 20px auto 0;
   transition: all 0.3s ease;
 }
 
@@ -107,10 +124,15 @@ button:hover {
 /* Responsive Styles */
 @media (max-width: 600px) {
   .container {
-    padding: 15px;  /* Adjust padding on smaller screens */
+    padding: 15px;
   }
-  
+
   button {
-    font-size: 18px;  /* Increase font size on smaller screens */
+    font-size: 18px;
   }
+}
+
+/* Additional Styles for Dropdown */
+.form-group select option {
+  padding: 5px; /* Ensures options are spaced well */
 }
